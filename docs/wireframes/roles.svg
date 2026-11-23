@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">Дополнительные экраны и роли</title><desc id="desc">Низкодетальные прототипы экранов. Стрелки показывают переходы. Каждый макет является ссылкой на соответствующий экран.</desc>
+<defs><marker id="tip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#395a80"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#263648}.title{font-size:17px;font-weight:bold}.body{font-size:15px}.small{font-size:12px;fill:#526477}.frame{fill:#fff;stroke:#8296ab;stroke-width:1.5}.head{fill:#e9eef4}.line{stroke:#c9d2dd}.arrow{fill:none;stroke:#395a80;stroke-width:2;marker-end:url(#tip)}a:hover .frame{stroke:#2361ad;stroke-width:3}</style>
+<rect width="1200" height="860" fill="#f7f9fc"/><text x="40" y="35" font-size="24" font-weight="bold">Дополнительные экраны и роли</text>
+<text x="40" y="60" class="body">Лабораторная работа № 5. Нажмите на прототип, чтобы открыть соответствующий экран.</text>
+<a href="../../UI/index.html#login"><rect class="frame" x="40" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="100" width="320" height="28"/>
+    <text x="52" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="153" class="title">Вход в систему</text>
+    <text x="56" y="180" class="body">Телефон · пароль</text><text x="56" y="202" class="body">[Войти в учебный кабинет]</text><text x="56" y="224" class="body">Переход в личный кабинет</text>
+    <line x1="52" y1="250" x2="348" y2="250" class="line"/>
+    <text x="56" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#catalog"><rect class="frame" x="440" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="100" width="320" height="28"/>
+    <text x="452" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="153" class="title">Каталог</text>
+    <text x="456" y="180" class="body">Тип плавательного средства</text><text x="456" y="202" class="body">Сортировка по цене</text><text x="456" y="224" class="body">[Выбрать средство]</text>
+    <line x1="452" y1="250" x2="748" y2="250" class="line"/>
+    <text x="456" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#created"><rect class="frame" x="840" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="100" width="320" height="28"/>
+    <text x="852" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="153" class="title">Результат операции</text>
+    <text x="856" y="180" class="body">Бронь создана / изменена</text><text x="856" y="202" class="body">Номер · параметры заказа</text><text x="856" y="224" class="body">[К списку броней]</text>
+    <line x1="852" y1="250" x2="1148" y2="250" class="line"/>
+    <text x="856" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#users"><rect class="frame" x="40" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="360" width="320" height="28"/>
+    <text x="52" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="413" class="title">Пользователи</text>
+    <text x="56" y="440" class="body">Имена · роли · телефоны</text><text x="56" y="462" class="body">[Добавить] [Редактировать]</text><text x="56" y="484" class="body">[Удалить]</text>
+    <line x1="52" y1="510" x2="348" y2="510" class="line"/>
+    <text x="56" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#user-add"><rect class="frame" x="440" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="360" width="320" height="28"/>
+    <text x="452" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="413" class="title">Форма пользователя</text>
+    <text x="456" y="440" class="body">ФИО · телефон · роль</text><text x="456" y="462" class="body">VIP · состояние записи</text><text x="456" y="484" class="body">[Сохранить] [Отмена]</text>
+    <line x1="452" y1="510" x2="748" y2="510" class="line"/>
+    <text x="456" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#user-delete"><rect class="frame" x="840" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="360" width="320" height="28"/>
+    <text x="852" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="413" class="title">Удаление пользователя</text>
+    <text x="856" y="440" class="body">Данные выбранной записи</text><text x="856" y="462" class="body">Подтверждение действия</text><text x="856" y="484" class="body">[Удалить] [Отмена]</text>
+    <line x1="852" y1="510" x2="1148" y2="510" class="line"/>
+    <text x="856" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#subscription"><rect class="frame" x="40" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="620" width="320" height="28"/>
+    <text x="52" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="673" class="title">Абонемент</text>
+    <text x="56" y="700" class="body">Тип · период · остаток занятий</text><text x="56" y="722" class="body">Даты заморозки</text><text x="56" y="744" class="body">[Заморозить]</text>
+    <line x1="52" y1="770" x2="348" y2="770" class="line"/>
+    <text x="56" y="786" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#schedule"><rect class="frame" x="440" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="620" width="320" height="28"/>
+    <text x="452" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="673" class="title">Расписание инструктора</text>
+    <text x="456" y="700" class="body">Только собственные занятия</text><text x="456" y="722" class="body">Время · площадка · клиент</text><text x="456" y="744" class="body">Тип обучения · средство</text>
+    <line x1="452" y1="770" x2="748" y2="770" class="line"/>
+    <text x="456" y="786" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#reports"><rect class="frame" x="840" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="620" width="320" height="28"/>
+    <text x="852" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="673" class="title">Отчёт руководителя</text>
+    <text x="856" y="700" class="body">Период · показатели</text><text x="856" y="722" class="body">Часы аренды по дням</text><text x="856" y="744" class="body">Минимум · максимум · сумма</text>
+    <line x1="852" y1="770" x2="1148" y2="770" class="line"/>
+    <text x="856" y="786" class="small">Footer: АИС · автор · год</text></a><path class="arrow" d="M360 440 L435 440"/><text class="small" x="365" y="422">Добавить</text><path class="arrow" d="M760 440 L835 440"/><text class="small" x="770" y="422">Удалить</text><text x="40" y="825" class="body">Вдовин Д. Е. · АИС «Аренда плавательного средства» · HTML + CSS</text></svg>

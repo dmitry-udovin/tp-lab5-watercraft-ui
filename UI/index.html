@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Статический прототип АИС «Аренда плавательного средства». Лабораторная работа № 5, HTML и CSS.">
+  <title>Аренда на воде — АИС</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти к содержимому</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">≈</span><span><strong>Аренда на воде</strong><small>Аренда и обучение на плавательных средствах</small></span></a>
+    <div class="account"><div><strong>Алексей Петров</strong><small>Клиент · VIP</small></div><a href="#login">Вход</a></div>
+  </div></header>
+  <div class="prototype-note">Учебный прототип · Вымышленные данные · Время примера: 24 июня 2027, 10:00</div>
+  <div class="app">
+    <aside class="sidebar"><p class="nav-label">Разделы системы</p><nav aria-label="Основная навигация">
+      <a class="nav-home" href="#home">Главная</a><a class="nav-booking" href="#booking">Бронирование</a>
+      <a class="nav-bookings" href="#bookings">Мои брони</a><a class="nav-subscription" href="#subscription">Абонемент</a>
+      <a class="nav-schedule" href="#schedule">Расписание</a><a class="nav-reports" href="#reports">Отчёты</a>
+      <a class="nav-users" href="#users">Пользователи</a><a class="nav-map" href="#map">Карта экранов</a>
+    </nav><p class="aside-note">Площадки: Комсомольское озеро и Дрозды.<br><br>Часы работы: 08:00–20:00.<br><br>Начало брони — минимум за 2 часа.</p></aside>
+    <main id="content" tabindex="-1">
+      <section class="screen" id="home" aria-labelledby="home-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="home-title">Личный кабинет</h1>
+            <p class="lead">Выберите действие или откройте ближайшую бронь.</p></div>
+          <a class="button " href="#booking">Забронировать</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span>Активные брони</span><strong>2</strong><span>Ближайшая — сегодня в 14:00</span></div>
+          <div class="stat"><span>Абонемент</span><strong>6 / 8</strong><span>Занятий осталось в этом месяце</span></div>
+          <div class="stat"><span>Статус клиента</span><strong>VIP</strong><span>Скидка 10% в учебном примере</span></div>
+        </div>
+        <div class="two-col"><div>
+          <section class="card"><h2>Ближайшее занятие</h2>
+            <dl class="details"><div><dt>Плавательное средство</dt><dd>Сапборд SUP-01</dd></div><div><dt>Время</dt><dd>Сегодня, 14:00–16:00</dd></div><div><dt>Площадка</dt><dd>Комсомольское озеро</dd></div><div><dt>Инструктор</dt><dd>Анна Соколова</dd></div></dl>
+            <div class="actions"><a class="button secondary" href="#detail">Открыть бронь</a><a class="button secondary" href="#bookings">Все мои брони</a></div>
+          </section>
+          <section class="card"><h2>Как забронировать</h2><ol class="steps">
+            <li>Выберите средство, площадку и время.</li><li>Проверьте доступность и состав заказа.</li>
+            <li>Подтвердите бронирование и сохраните его номер.</li></ol></section>
+        </div><aside>
+          <section class="card"><h2>Бронирование заранее</h2><p>Начало аренды или занятия — не ранее чем через 2 часа от текущего времени.</p>
+            <p class="hint">В учебном примере сейчас 24.06.2027, 10:00. Самое раннее начало — 12:00.</p></section>
+          <section class="card"><h2>Разделы системы</h2><div class="quick-links">
+            <a href="#catalog">Выбрать плавательное средство</a><a href="#subscription">Посмотреть абонемент</a>
+            <a href="#map">Открыть карту экранов</a></div></section>
+        </aside></div>
+      </section>
+
+      <section class="screen" id="empty" aria-labelledby="empty-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="empty-title">Бронирований пока нет</h1>
+            <p class="lead">Пустое состояние личного кабинета.</p></div>
+          
+        </div>
+
+        <div class="card empty-state"><div class="empty-symbol" aria-hidden="true">≈</div>
+          <h2>Здесь появятся ваши бронирования</h2><p class="muted">Выберите средство и удобное время, чтобы оформить первую бронь.</p>
+          <div class="actions"><a class="button " href="#booking">Создать первую бронь</a><a class="button secondary" href="#home">На главную</a></div></div>
+      </section>
+
+      <section class="screen" id="login" aria-labelledby="login-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="login-title">Вход в систему</h1>
+            <p class="lead">Предварительный экран авторизации.</p></div>
+          
+        </div>
+
+        <form class="card narrow" action="#home" method="get">
+          <div class="notice"><p>Учебная форма входа. Для просмотра используйте вымышленные данные; проверка учётной записи здесь не выполняется.</p></div>
+          <div class="form-grid"><div class="field full"><label for="login-phone">Телефон</label>
+            <input id="login-phone" type="tel" autocomplete="off" placeholder="+375 (00) 000-00-01" required></div>
+          <div class="field full"><label for="login-password">Пароль</label><input id="login-password" type="password" autocomplete="off" minlength="6" required aria-describedby="password-hint">
+            <p class="hint" id="password-hint">Для проверки формы введите любые 6 символов. Настоящий пароль не нужен.</p></div></div>
+          <div class="actions"><button type="submit">Войти в учебный кабинет</button><a class="button secondary" href="#home">Отмена</a></div>
+          <p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p>
+        </form>
+      </section>
+
+      <section class="screen" id="catalog" aria-labelledby="catalog-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="catalog-title">Плавательные средства</h1>
+            <p class="lead">Каталог для выбора типа средства перед оформлением брони.</p></div>
+          
+        </div>
+
+        <div class="card"><div class="catalog-controls">
+          <fieldset><legend>Тип средства</legend><div class="check-list">
+            <label><input type="radio" name="craft-filter" id="filter-all" checked>Все</label>
+            <label><input type="radio" name="craft-filter" id="filter-sup">Сапборды</label>
+            <label><input type="radio" name="craft-filter" id="filter-boat">Катера и лодки</label></div></fieldset>
+          <fieldset><legend>Сортировка по цене</legend><div class="check-list">
+            <label><input type="radio" name="price-sort" id="price-asc" checked>Сначала дешевле</label>
+            <label><input type="radio" name="price-sort" id="price-desc">Сначала дороже</label></div></fieldset>
+        </div><p class="hint">Фильтр и сортировка меняют список сразу. Тарифы приведены для примера; инструктор и оборудование оплачиваются отдельно.</p>
+        <div class="catalog-list">
+          <article class="craft sup price-20"><div><h2>Сапборд SUP-01</h2><p>1 человек · Комсомольское озеро</p></div><div><strong>20 BYN / час</strong><div class="actions"><a class="button secondary" href="#booking">Выбрать сапборд</a></div></div></article>
+          <article class="craft boat price-30"><div><h2>Лодка B-03</h2><p>До 3 человек · Комсомольское озеро</p></div><div><strong>30 BYN / час</strong><div class="actions"><a class="button secondary" href="#booking">К форме бронирования</a></div></div></article>
+          <article class="craft price-35"><div><h2>Катамаран C-02</h2><p>До 4 человек · Площадка «Дрозды»</p></div><div><strong>35 BYN / час</strong><div class="actions"><a class="button secondary" href="#booking">К форме бронирования</a></div></div></article>
+          <article class="craft price-45"><div><h2>Рафт R-01</h2><p>До 6 человек · Площадка «Дрозды»</p></div><div><strong>45 BYN / час</strong><div class="actions"><a class="button secondary" href="#booking">К форме бронирования</a></div></div></article>
+          <article class="craft boat price-60"><div><h2>Катер M-01</h2><p>До 5 человек · Площадка «Дрозды»</p></div><div><strong>60 BYN / час</strong><div class="actions"><a class="button secondary" href="#booking">К форме бронирования</a></div></div></article>
+        </div></div>
+      </section>
+
+      <section class="screen" id="booking" aria-labelledby="booking-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="booking-title">Новое бронирование</h1>
+            <p class="lead">Шаг 1 из 2. Выбор средства и параметров занятия.</p></div>
+          <a class="button secondary" href="#catalog">Каталог</a>
+        </div>
+
+        <form class="card" action="#review" method="get">
+          <p>Поля со звёздочкой обязательны для заполнения.</p><div class="notice"><p>Время начала — не ранее 12:00 24.06.2027 в текущем учебном примере.</p></div>
+          <div class="form-grid">
+            <div class="field"><label for="new-craft">Плавательное средство *</label><select id="new-craft" required>
+              <option>Сапборд SUP-01</option><option>Лодка B-03</option><option>Катамаран C-02</option><option>Рафт R-01</option><option>Катер M-01</option></select></div>
+            <div class="field"><label for="new-service">Услуга *</label><select id="new-service" required>
+              <option>Индивидуальное обучение</option><option>Групповое обучение</option><option>Аренда без обучения</option></select></div>
+            <div class="field"><label for="new-location">Площадка *</label><select id="new-location" required>
+              <option>Комсомольское озеро, Минск</option><option>Дрозды, Минск</option></select></div>
+            <div class="field"><label for="new-people">Количество человек *</label><input id="new-people" type="number" min="1" max="6" value="1" required>
+              <p class="hint">Вместимость зависит от средства; для сапборда — 1 человек.</p></div>
+            <div class="field"><label for="new-date">Дата *</label><input id="new-date" type="date" value="2027-06-24" min="2027-06-24" required></div>
+            <div class="field"><label for="new-time">Время начала *</label><input id="new-time" type="time" value="14:00" min="08:00" max="18:00" step="1800" required></div>
+            <div class="field"><label for="new-duration">Длительность *</label><select id="new-duration"><option>1 час</option><option selected>2 часа</option><option>3 часа</option></select></div>
+            <div class="field"><label for="new-payment">Оплата</label><select id="new-payment"><option>Разовая оплата</option><option>Абонемент на месяц</option><option>Абонемент на курс</option></select></div>
+          </div>
+          <fieldset class="form-section"><legend>Дополнительное оборудование и питание</legend><div class="check-list">
+            <label><input type="checkbox" checked>Жилет, 5 BYN</label><label><input type="checkbox">Термокостюм, 10 BYN</label>
+            <label><input type="checkbox">Парус, 15 BYN</label><label><input type="checkbox">Вода и перекус, 8 BYN</label></div></fieldset>
+          <details class="form-section"><summary>Заказ по телефону (для администратора)</summary>
+            <div class="form-grid form-section"><div class="field"><label for="new-client">Клиент</label><select id="new-client"><option>Алексей Петров</option><option>Мария Иванова</option></select></div>
+              <div class="field"><label for="new-phone">Телефон клиента</label><input id="new-phone" type="tel" value="+375 (00) 000-00-01"></div></div>
+            <p class="hint">Дополнительные поля для оформления заказа администратором от имени клиента.</p></details>
+          <div class="field form-section"><label for="new-comment">Комментарий</label><textarea id="new-comment" placeholder="Например, первый раз на сапборде"></textarea></div>
+          <div class="form-footer"><div class="actions"><button type="submit">Проверить доступность</button>
+            <a class="button secondary" href="#home">Отмена</a><button class="secondary" type="reset">Сбросить поля</button></div><p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p></div>
+        </form>
+        <p class="hint">Альтернативные состояния: <a href="#error">ошибка правила 2 часов</a>; <a href="#unavailable">средство или инструктор заняты</a>.</p>
+      </section>
+
+      <section class="screen" id="review" aria-labelledby="review-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="review-title">Подтверждение брони</h1>
+            <p class="lead">Шаг 2 из 2. Проверьте параметры и итоговую сумму.</p></div>
+          
+        </div>
+
+        <div class="notice success"><p><strong>Пример успешной проверки.</strong> Средство и инструктор свободны на выбранное время.</p></div>
+        <div class="two-col"><section class="card"><h2>Параметры заказа</h2><dl class="details"><div><dt>Плавательное средство</dt><dd>Сапборд SUP-01</dd></div><div><dt>Услуга</dt><dd>Индивидуальное обучение</dd></div><div><dt>Площадка</dt><dd>«Комсомольское озеро», Минск</dd></div><div><dt>Дата и время</dt><dd>24.06.2027, 14:00–16:00</dd></div><div><dt>Клиент</dt><dd>Алексей Петров</dd></div><div><dt>Количество человек</dt><dd>1 человек</dd></div><div><dt>Инструктор</dt><dd>Анна Соколова</dd></div><div><dt>Дополнительно</dt><dd>Спасательный жилет</dd></div></dl>
+          <p class="hint">Показан фиксированный заказ на 24.06.2027, 14:00. Изменения полей предыдущей формы сюда не передаются.</p></section>
+          <section class="card"><h2>Стоимость</h2><dl class="price-lines"><div><dt>Сапборд, 2 ч × 20 BYN</dt><dd>40 BYN</dd></div>
+  <div><dt>Инструктор, 2 ч × 15 BYN</dt><dd>30 BYN</dd></div>
+  <div><dt>Спасательный жилет</dt><dd>5 BYN</dd></div>
+  <div><dt>VIP-скидка, 10%</dt><dd>−7,50 BYN</dd></div>
+  <div class="total"><dt>Итого</dt><dd>67,50 BYN</dd></div></dl><p class="hint">Скидка 10% — условие учебного примера для VIP-клиента.</p></section></div>
+        <div class="actions"><a class="button " href="#created">Подтвердить бронирование</a><a class="button secondary" href="#booking">Изменить параметры</a><a class="button secondary" href="#home">Отмена</a></div>
+      </section>
+
+      <section class="screen" id="created" aria-labelledby="created-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="created-title">Бронь оформлена</h1>
+            <p class="lead">Результат подтверждения заказа.</p></div>
+          
+        </div>
+
+        <div class="card narrow"><div class="notice success"><p><strong>Демонстрация успешного создания брони № 1042.</strong></p></div>
+          <h2>Сапборд SUP-01, 24 июня, 14:00–16:00</h2><p>Комсомольское озеро · индивидуальное обучение · 1 человек</p>
+          <p>К оплате: <strong>67,50 BYN</strong></p><p class="hint">В рабочей системе на этом шаге сохраняется бронь и отправляется уведомление инструктору. В макете данные не записываются.</p>
+          <div class="actions"><a class="button " href="#detail">Посмотреть бронь</a><a class="button secondary" href="#bookings">К списку броней</a></div></div>
+      </section>
+
+      <section class="screen" id="bookings" aria-labelledby="bookings-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="bookings-title">Мои бронирования</h1>
+            <p class="lead">Просмотр, поиск и изменение существующих броней.</p></div>
+          <a class="button " href="#booking">Новая бронь</a>
+        </div>
+<form class="card" action="#search-result" method="get"><div class="toolbar">
+  <div class="field"><label for="search-booking">Поиск по средству или номеру</label><input id="search-booking" type="search" placeholder="Например, сапборд" value="Сапборд"></div>
+  <button type="submit">Показать пример поиска</button></div>
+  <p class="hint">Макет результата для запроса «Сапборд». Произвольный поиск будет подключён при разработке логики.</p></form>
+        <section class="card"><h2>Список броней</h2><article class="booking-row"><div><span class="badge green">Подтверждена</span>
+      <h2>Сапборд SUP-01</h2><p>№ 1042 · 24.06.2027, 14:00–16:00</p><p>Комсомольское озеро · индивидуальное обучение</p>
+      <a href="#detail">Посмотреть бронь № 1042</a></div>
+      <div class="booking-meta"><strong>67,50 BYN</strong><span class="muted">за всё время</span></div></article><article class="booking-row"><div><span class="badge green">Подтверждена</span>
+      <h2>Катамаран C-02</h2><p>№ 1048 · 26.06.2027, 12:00–13:00</p><p>Дрозды · аренда · 2 человека</p>
+      <a href="#detail-1048">Посмотреть бронь № 1048</a></div>
+      <div class="booking-meta"><strong>31,50 BYN</strong><span class="muted">за всё время</span></div></article>
+          <div class="pagination form-section"><span>Показаны 1–2 из 4, сначала ближайшие</span><nav aria-label="Страницы броней"><span aria-current="page">1</span><a class="button secondary small" href="#bookings-2">2</a><a class="button secondary small" href="#bookings-2">Следующая</a></nav></div></section>
+        <p class="hint"><a href="#empty">Посмотреть пустое состояние списка</a> · <a href="#catalog">Каталог с фильтрацией и сортировкой</a></p>
+      </section>
+
+      <section class="screen" id="bookings-2" aria-labelledby="bookings-2-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="bookings-2-title">Мои бронирования</h1>
+            <p class="lead">Вторая страница. Завершённые и отменённые заказы.</p></div>
+          <a class="button " href="#booking">Новая бронь</a>
+        </div>
+
+        <section class="card"><h2>История</h2><article class="booking-row"><div><span class="badge gray">Завершена</span>
+      <h2>Лодка B-03</h2><p>№ 1008 · 20.06.2027, 10:00–11:00</p><p>Комсомольское озеро · аренда · 2 человека</p>
+      <a href="#detail-1008">Посмотреть бронь № 1008</a></div>
+      <div class="booking-meta"><strong>27,00 BYN</strong><span class="muted">за всё время</span></div></article><article class="booking-row"><div><span class="badge red">Отменена</span>
+      <h2>Рафт R-01</h2><p>№ 982 · 15.06.2027, 13:00–14:00</p><p>Дрозды · групповое обучение · 4 человека</p>
+      <a href="#detail-982">Посмотреть бронь № 982</a></div>
+      <div class="booking-meta"><strong>54,00 BYN</strong><span class="muted">за всё время</span></div></article><div class="pagination form-section"><span>Показаны 3–4 из 4</span>
+          <nav aria-label="Страницы броней"><a class="button secondary small" href="#bookings">Предыдущая</a><a class="button secondary small" href="#bookings">1</a><span aria-current="page">2</span></nav></div></section>
+      </section>
+
+      <section class="screen" id="search-result" aria-labelledby="search-result-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="search-result-title">Результат поиска</h1>
+            <p class="lead">Поиск по номеру брони или названию средства.</p></div>
+          
+        </div>
+
+        <div class="notice"><p>Пример запроса: «Сапборд». Найдена 1 бронь.</p></div>
+        <section class="card"><h2>Найденные записи</h2><article class="booking-row"><div><span class="badge green">Подтверждена</span>
+      <h2>Сапборд SUP-01</h2><p>№ 1042 · 24.06.2027, 14:00–16:00</p><p>Комсомольское озеро · индивидуальное обучение</p>
+      <a href="#detail">Посмотреть бронь № 1042</a></div>
+      <div class="booking-meta"><strong>67,50 BYN</strong><span class="muted">за всё время</span></div></article></section>
+        <div class="actions"><a class="button secondary" href="#bookings">Сбросить поиск</a><a class="button secondary" href="#not-found">Пример: ничего не найдено</a></div>
+      </section>
+
+      <section class="screen" id="not-found" aria-labelledby="not-found-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="not-found-title">Ничего не найдено</h1>
+            <p class="lead">Пример пустого результата поиска.</p></div>
+          
+        </div>
+
+        <div class="card empty-state"><h2>По запросу «Каяк» нет бронирований</h2><p class="muted">Попробуйте изменить запрос или вернуться к полному списку.</p>
+          <div class="actions"><a class="button " href="#bookings">Вернуться к поиску</a></div></div>
+      </section>
+
+      <section class="screen" id="detail" aria-labelledby="detail-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="detail-title">Бронь № 1042</h1>
+            <p class="lead">Просмотр параметров выбранного заказа.</p></div>
+          
+        </div>
+
+        <div class="two-col"><section class="card"><h2>Информация о брони</h2><dl class="details"><div><dt>Номер брони</dt><dd>1042</dd></div><div><dt>Статус</dt><dd><span class="badge green">Подтверждена</span></dd></div><div><dt>Плавательное средство</dt><dd>Сапборд SUP-01</dd></div><div><dt>Услуга</dt><dd>Индивидуальное обучение</dd></div><div><dt>Площадка</dt><dd>«Комсомольское озеро», Минск</dd></div><div><dt>Дата и время</dt><dd>24.06.2027, 14:00–16:00</dd></div><div><dt>Клиент</dt><dd>Алексей Петров</dd></div><div><dt>Количество человек</dt><dd>1 человек</dd></div><div><dt>Инструктор</dt><dd>Анна Соколова</dd></div><div><dt>Дополнительно</dt><dd>Спасательный жилет</dd></div></dl></section>
+          <section class="card"><h2>Стоимость заказа</h2><dl class="price-lines"><div><dt>Сапборд, 2 ч × 20 BYN</dt><dd>40 BYN</dd></div>
+  <div><dt>Инструктор, 2 ч × 15 BYN</dt><dd>30 BYN</dd></div>
+  <div><dt>Спасательный жилет</dt><dd>5 BYN</dd></div>
+  <div><dt>VIP-скидка, 10%</dt><dd>−7,50 BYN</dd></div>
+  <div class="total"><dt>Итого</dt><dd>67,50 BYN</dd></div></dl><p class="hint">Способ оплаты: разовая оплата на площадке.</p></section></div>
+        <div class="actions"><a class="button " href="#edit">Редактировать</a><a class="button danger" href="#delete">Отменить бронь</a><a class="button secondary" href="#bookings">К списку</a></div>
+      </section>
+
+      <section class="screen" id="detail-1048" aria-labelledby="detail-1048-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="detail-1048-title">Бронь № 1048</h1>
+            <p class="lead">Просмотр демонстрационной записи из списка.</p></div>
+          
+        </div>
+<section class="card narrow"><h2>Катамаран C-02</h2><dl class="details"><div><dt>Время</dt><dd>26.06.2027, 12:00–13:00</dd></div><div><dt>Площадка</dt><dd>Дрозды</dd></div><div><dt>Статус</dt><dd>Подтверждена</dd></div><div><dt>Стоимость</dt><dd>31,50 BYN</dd></div></dl><div class="actions"><a class="button secondary" href="#bookings">К списку</a></div></section>
+      </section>
+
+      <section class="screen" id="detail-1008" aria-labelledby="detail-1008-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="detail-1008-title">Бронь № 1008</h1>
+            <p class="lead">Просмотр демонстрационной записи из списка.</p></div>
+          
+        </div>
+<section class="card narrow"><h2>Лодка B-03</h2><dl class="details"><div><dt>Время</dt><dd>20.06.2027, 10:00–11:00</dd></div><div><dt>Площадка</dt><dd>Комсомольское озеро</dd></div><div><dt>Статус</dt><dd>Завершена</dd></div><div><dt>Стоимость</dt><dd>27,00 BYN</dd></div></dl><div class="actions"><a class="button secondary" href="#bookings">К списку</a></div></section>
+      </section>
+
+      <section class="screen" id="detail-982" aria-labelledby="detail-982-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="detail-982-title">Бронь № 982</h1>
+            <p class="lead">Просмотр демонстрационной записи из списка.</p></div>
+          
+        </div>
+<section class="card narrow"><h2>Рафт R-01</h2><dl class="details"><div><dt>Время</dt><dd>15.06.2027, 13:00–14:00</dd></div><div><dt>Площадка</dt><dd>Дрозды</dd></div><div><dt>Статус</dt><dd>Отменена</dd></div><div><dt>Стоимость</dt><dd>54,00 BYN</dd></div></dl><div class="actions"><a class="button secondary" href="#bookings">К списку</a></div></section>
+      </section>
+
+      <section class="screen" id="edit" aria-labelledby="edit-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="edit-title">Редактирование брони № 1042</h1>
+            <p class="lead">Пример переноса занятия с 14:00 на 16:00.</p></div>
+          
+        </div>
+
+        <form class="card" action="#updated" method="get">
+          <p>Измените время или параметры существующей брони.</p><div class="notice"><p>Время начала — не ранее 12:00 24.06.2027 в текущем учебном примере.</p></div>
+          <div class="form-grid">
+            <div class="field"><label for="edit-craft">Плавательное средство *</label><select id="edit-craft" required>
+              <option>Сапборд SUP-01</option><option>Лодка B-03</option><option>Катамаран C-02</option><option>Рафт R-01</option><option>Катер M-01</option></select></div>
+            <div class="field"><label for="edit-service">Услуга *</label><select id="edit-service" required>
+              <option>Индивидуальное обучение</option><option>Групповое обучение</option><option>Аренда без обучения</option></select></div>
+            <div class="field"><label for="edit-location">Площадка *</label><select id="edit-location" required>
+              <option>Комсомольское озеро, Минск</option><option>Дрозды, Минск</option></select></div>
+            <div class="field"><label for="edit-people">Количество человек *</label><input id="edit-people" type="number" min="1" max="6" value="1" required>
+              <p class="hint">Вместимость зависит от средства; для сапборда — 1 человек.</p></div>
+            <div class="field"><label for="edit-date">Дата *</label><input id="edit-date" type="date" value="2027-06-24" min="2027-06-24" required></div>
+            <div class="field"><label for="edit-time">Время начала *</label><input id="edit-time" type="time" value="16:00" min="08:00" max="18:00" step="1800" required></div>
+            <div class="field"><label for="edit-duration">Длительность *</label><select id="edit-duration"><option>1 час</option><option selected>2 часа</option><option>3 часа</option></select></div>
+            <div class="field"><label for="edit-payment">Оплата</label><select id="edit-payment"><option>Разовая оплата</option><option>Абонемент на месяц</option><option>Абонемент на курс</option></select></div>
+          </div>
+          <fieldset class="form-section"><legend>Дополнительное оборудование и питание</legend><div class="check-list">
+            <label><input type="checkbox" checked>Жилет, 5 BYN</label><label><input type="checkbox">Термокостюм, 10 BYN</label>
+            <label><input type="checkbox">Парус, 15 BYN</label><label><input type="checkbox">Вода и перекус, 8 BYN</label></div></fieldset>
+          <details class="form-section"><summary>Заказ по телефону (для администратора)</summary>
+            <div class="form-grid form-section"><div class="field"><label for="edit-client">Клиент</label><select id="edit-client"><option>Алексей Петров</option><option>Мария Иванова</option></select></div>
+              <div class="field"><label for="edit-phone">Телефон клиента</label><input id="edit-phone" type="tel" value="+375 (00) 000-00-01"></div></div>
+            <p class="hint">Дополнительные поля для оформления заказа администратором от имени клиента.</p></details>
+          <div class="field form-section"><label for="edit-comment">Комментарий</label><textarea id="edit-comment" placeholder="Например, первый раз на сапборде"></textarea></div>
+          <div class="form-footer"><div class="actions"><button type="submit">Показать результат изменения</button>
+            <a class="button secondary" href="#detail">Отмена</a><button class="secondary" type="reset">Сбросить поля</button></div><p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p></div>
+        </form>
+        <p class="hint">Альтернативные состояния: <a href="#error">ошибка правила 2 часов</a>; <a href="#unavailable">средство или инструктор заняты</a>.</p>
+      </section>
+
+      <section class="screen" id="updated" aria-labelledby="updated-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="updated-title">Изменения сохранены</h1>
+            <p class="lead">Результат редактирования в статическом макете.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice success"><p>Пример обновлённой брони № 1042.</p></div>
+          <dl class="details"><div><dt>Новое время</dt><dd>24.06.2027, 16:00–18:00</dd></div><div><dt>Средство</dt><dd>Сапборд SUP-01</dd></div><div><dt>Стоимость</dt><dd>67,50 BYN</dd></div><div><dt>Статус</dt><dd>Подтверждена</dd></div></dl>
+          <p class="hint">Показан отдельный результат редактирования. Исходная демонстрационная запись № 1042 в списке остаётся прежней.</p>
+          <div class="actions"><a class="button " href="#bookings">К списку</a><a class="button secondary" href="#edit">Вернуться к форме</a></div></section>
+      </section>
+
+      <section class="screen" id="delete" aria-labelledby="delete-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="delete-title">Отмена брони № 1042</h1>
+            <p class="lead">Форма удаления активной брони с подтверждением.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice warning"><p>Подтвердите отмену выбранного заказа.</p></div>
+          <h2>Сапборд SUP-01</h2><p>24 июня 2027, 14:00–16:00 · Комсомольское озеро</p>
+          <p>В рабочей системе отмена освобождает средство и время инструктора. Запись остаётся в истории со статусом «Отменена».</p>
+          <div class="actions"><a class="button danger" href="#deleted">Да, отменить бронь</a><a class="button secondary" href="#detail">Нет, оставить бронь</a></div></section>
+      </section>
+
+      <section class="screen" id="deleted" aria-labelledby="deleted-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="deleted-title">Бронь отменена</h1>
+            <p class="lead">Результат отмены заказа.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice success"><p>Демонстрация отмены брони № 1042.</p></div><h2>Заказ отменён</h2>
+          <p class="hint">В макете это отдельный экран результата; общий список не изменяется.</p>
+          <div class="actions"><a class="button " href="#bookings">К списку броней</a><a class="button secondary" href="#booking">Создать новую бронь</a></div></section>
+      </section>
+
+      <section class="screen" id="error" aria-labelledby="error-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="error-title">Нельзя забронировать это время</h1>
+            <p class="lead">Альтернативный сценарий E-1 из лабораторных № 2–4.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice error"><p><strong>Бронирование доступно не ранее чем через 2 часа.</strong></p></div>
+          <h2>Выберите более позднее начало</h2><p>В учебном примере сейчас 24.06.2027, 10:00. Выбрано 11:00, то есть только через 1 час. Ближайшее допустимое время — 12:00.</p>
+          <p class="hint">Проверка показана как готовое состояние формы. Автоматического сравнения с текущим временем в статическом макете нет.</p>
+          <div class="actions"><a class="button " href="#booking">Исправить время</a><a class="button secondary" href="#home">На главную</a></div></section>
+      </section>
+
+      <section class="screen" id="unavailable" aria-labelledby="unavailable-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="unavailable-title">Выбранное время недоступно</h1>
+            <p class="lead">Альтернативный сценарий E-2: конфликт ресурсов.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice error"><p>Средство или инструктор заняты на выбранное время.</p></div>
+          <h2>Попробуйте другой интервал</h2><p>Пример: сапборд SUP-01 уже занят 24.06.2027 с 12:00 до 14:00. Выберите 14:00 или другую площадку.</p>
+          <div class="actions"><a class="button " href="#booking">Изменить параметры</a><a class="button secondary" href="#catalog">Выбрать другое средство</a></div></section>
+      </section>
+
+      <section class="screen" id="subscription" aria-labelledby="subscription-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="subscription-title">Мой абонемент</h1>
+            <p class="lead">Разовая оплата, месяц и курс предусмотрены в форме бронирования.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><h2>Обучение на месяц <span class="badge green">Активен</span></h2>
+          <dl class="details"><div><dt>Период действия</dt><dd>01.06.2027–30.06.2027</dd></div><div><dt>Тип занятий</dt><dd>Индивидуальное обучение</dd></div><div><dt>Осталось занятий</dt><dd>6 из 8</dd></div><div><dt>Статус клиента</dt><dd>VIP, скидка 10%</dd></div></dl>
+          <p class="form-section">Если временно не можете посещать занятия, можно приостановить абонемент.</p>
+          <form action="#frozen" method="get"><div class="form-grid"><div class="field"><label for="freeze-from">Начало заморозки</label><input id="freeze-from" type="date" value="2027-06-27" min="2027-06-25" max="2027-06-30" required></div>
+          <div class="field"><label for="freeze-until">Конец заморозки</label><input id="freeze-until" type="date" value="2027-06-30" min="2027-06-27" max="2027-06-30" required></div></div>
+          <div class="actions"><button type="submit">Показать заморозку</button><a class="button secondary" href="#booking">Записаться на занятие</a></div><p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p></form></section>
+      </section>
+
+      <section class="screen" id="frozen" aria-labelledby="frozen-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="frozen-title">Абонемент заморожен</h1>
+            <p class="lead">Результат операции с абонементом.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><h2>Пауза в занятиях <span class="badge orange">Заморожен</span></h2>
+          <p>Пример заморозки с 27 по 30 июня 2027 года. Неиспользованные занятия сохраняются.</p><p class="hint">Фактический срок действия и остаток занятий в макете не пересчитываются.</p>
+          <div class="actions"><a class="button " href="#subscription">К абонементу</a></div></section>
+      </section>
+
+      <section class="screen" id="schedule" aria-labelledby="schedule-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="schedule-title">Моё расписание</h1>
+            <p class="lead">Отдельный экран для роли «Инструктор».</p></div>
+          
+        </div>
+
+        <div class="notice"><p>Кабинет инструктора Анны Соколовой. Показаны только её собственные занятия.</p></div>
+        <section class="card"><h2>24 июня 2027, четверг</h2>
+          <article class="schedule-item"><time datetime="2027-06-24T12:00">12:00–14:00</time><h3>Групповое обучение · Рафт R-01</h3><p>Дрозды · 4 человека · занятие № 1040</p></article>
+          <article class="schedule-item"><time datetime="2027-06-24T14:00">14:00–16:00</time><h3>Индивидуальное обучение · Сапборд SUP-01</h3><p>Комсомольское озеро · Алексей Петров · 1 человек</p></article></section>
+        <p class="hint">Выбор роли здесь демонстрационный. Реальное разграничение доступа выполняется сервером и не входит в эту работу.</p>
+      </section>
+
+      <section class="screen" id="reports" aria-labelledby="reports-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="reports-title">Отчёты за период</h1>
+            <p class="lead">Просмотр показателей деятельности предприятия.</p></div>
+          
+        </div>
+
+        <div class="notice"><p>Кабинет руководителя. График и показатели рассчитаны по отдельному учебному набору данных за 21–27 июня 2027 года.</p></div>
+        <section class="card"><h2>Период отчёта</h2><form action="#reports" method="get"><div class="toolbar">
+          <div class="field"><label for="report-from">С</label><input id="report-from" type="date" value="2027-06-21"></div>
+          <div class="field"><label for="report-to">По</label><input id="report-to" type="date" value="2027-06-27"></div>
+          <button type="submit">Показать пример отчёта</button></div><p class="hint">Данные фиксированы для указанной недели, изменение полей не пересчитывает показатели.</p></form></section>
+        <div class="stats"><div class="stat"><span>Часы аренды</span><strong>42 ч</strong><span>Суммарно за неделю</span></div>
+          <div class="stat"><span>Работа инструкторов</span><strong>28 ч</strong><span>Суммарно за неделю</span></div>
+          <div class="stat"><span>Посетители</span><strong>36</strong><span>Человек на занятиях и аренде</span></div></div>
+        <section class="card"><h2>Часы аренды по дням</h2><div class="chart" aria-label="Часы аренды за неделю: понедельник 4, вторник 6, среда 5, четверг 8, пятница 7, суббота 9, воскресенье 3">
+          <div class="chart-row"><span>Пн, 21.06</span><div class="bar-track"><div class="bar value-4"></div></div><strong>4 ч</strong></div>
+          <div class="chart-row"><span>Вт, 22.06</span><div class="bar-track"><div class="bar value-6"></div></div><strong>6 ч</strong></div>
+          <div class="chart-row"><span>Ср, 23.06</span><div class="bar-track"><div class="bar value-5"></div></div><strong>5 ч</strong></div>
+          <div class="chart-row"><span>Чт, 24.06</span><div class="bar-track"><div class="bar value-8"></div></div><strong>8 ч</strong></div>
+          <div class="chart-row"><span>Пт, 25.06</span><div class="bar-track"><div class="bar value-7"></div></div><strong>7 ч</strong></div>
+          <div class="chart-row"><span>Сб, 26.06</span><div class="bar-track"><div class="bar value-9"></div></div><strong>9 ч</strong></div>
+          <div class="chart-row"><span>Вс, 27.06</span><div class="bar-track"><div class="bar value-3"></div></div><strong>3 ч</strong></div>
+        </div><p class="hint">Сумма: 42 ч. Минимум: 3 ч (27.06), максимум: 9 ч (26.06). Часы занятий за период: 24 ч.</p></section>
+      </section>
+
+      <section class="screen" id="users" aria-labelledby="users-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="users-title">Пользователи</h1>
+            <p class="lead">Добавление, редактирование и удаление пользователя.</p></div>
+          <a class="button " href="#user-add">Добавить пользователя</a>
+        </div>
+
+        <div class="notice"><p>Раздел администратора: просмотр и управление учётными записями.</p></div>
+        <section class="card"><h2>Зарегистрированные пользователи</h2><div class="user-list">
+          <article class="user-row"><div><h3>Алексей Петров <span class="badge">Клиент · VIP</span></h3><p>+375 (00) 000-00-01 · ID 101</p></div>
+            <div class="actions flush"><a class="button secondary small" href="#user-edit">Редактировать</a><a class="button secondary small" href="#user-delete">Удалить</a></div></article>
+          <article class="user-row"><div><h3>Анна Соколова <span class="badge gray">Инструктор</span></h3><p>+375 (00) 000-00-02 · ID 102</p></div>
+            <a href="#schedule">Посмотреть расписание</a></article>
+          <article class="user-row"><div><h3>Игорь Орлов <span class="badge gray">Администратор</span></h3><p>+375 (00) 000-00-03 · ID 103</p></div></article>
+        </div><p class="hint form-section">Имена и контакты вымышлены. На этом экране помещаются все 3 записи.</p></section>
+      </section>
+
+      <section class="screen" id="user-add" aria-labelledby="user-add-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="user-add-title">Добавление пользователя</h1>
+            <p class="lead">Новая учётная запись. Звёздочкой отмечены обязательные поля.</p></div>
+          
+        </div>
+<form class="card narrow" action="#user-saved" method="get"><div class="form-grid">
+      <div class="field full"><label for="user-new-name">ФИО *</label><input id="user-new-name" type="text" value="" required></div>
+      <div class="field full"><label for="user-new-phone">Телефон *</label><input id="user-new-phone" type="tel" value="" placeholder="+375 (00) 000-00-01" required></div>
+      <div class="field"><label for="user-new-role">Роль</label><select id="user-new-role"><option>Клиент</option><option>Инструктор</option><option>Администратор</option><option>Руководитель</option></select></div>
+      <div class="field"><label for="user-new-state">Статус</label><select id="user-new-state"><option>Активен</option><option>Заблокирован</option></select></div>
+      <div class="field full"><label><input type="checkbox" >VIP-клиент</label></div></div>
+      <div class="actions"><button type="submit">Показать результат сохранения</button><a class="button secondary" href="#users">Отмена</a></div><p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p></form>
+      </section>
+
+      <section class="screen" id="user-edit" aria-labelledby="user-edit-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="user-edit-title">Редактирование пользователя</h1>
+            <p class="lead">Изменение данных пользователя ID 101.</p></div>
+          
+        </div>
+<form class="card narrow" action="#user-saved" method="get"><div class="form-grid">
+      <div class="field full"><label for="user-edit-name">ФИО *</label><input id="user-edit-name" type="text" value="Алексей Петров" required></div>
+      <div class="field full"><label for="user-edit-phone">Телефон *</label><input id="user-edit-phone" type="tel" value="+375 (00) 000-00-01" placeholder="+375 (00) 000-00-01" required></div>
+      <div class="field"><label for="user-edit-role">Роль</label><select id="user-edit-role"><option>Клиент</option><option>Инструктор</option><option>Администратор</option><option>Руководитель</option></select></div>
+      <div class="field"><label for="user-edit-state">Статус</label><select id="user-edit-state"><option>Активен</option><option>Заблокирован</option></select></div>
+      <div class="field full"><label><input type="checkbox" checked>VIP-клиент</label></div></div>
+      <div class="actions"><button type="submit">Показать результат сохранения</button><a class="button secondary" href="#users">Отмена</a></div><p class="hint">Это статический пример: введённые значения не сохраняются. Переход открывает заранее подготовленное состояние.</p></form>
+      </section>
+
+      <section class="screen" id="user-delete" aria-labelledby="user-delete-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="user-delete-title">Удаление пользователя</h1>
+            <p class="lead">Отдельное подтверждение перед удалением данных.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice warning"><p>Подтвердите удаление пользователя ID 101.</p></div>
+          <h2>Алексей Петров</h2><p>Телефон: +375 (00) 000-00-01 · Клиент · VIP</p>
+          <p>В рабочей системе при наличии активных броней сначала требуется их обработка. Для удаления учётной записи с историей можно предусмотреть блокировку.</p>
+          <div class="actions"><a class="button danger" href="#user-removed">Удалить учебную запись</a><a class="button secondary" href="#users">Отмена</a></div></section>
+      </section>
+
+      <section class="screen" id="user-saved" aria-labelledby="user-saved-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="user-saved-title">Данные пользователя сохранены</h1>
+            <p class="lead">Экран результата операции.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice success"><p>Пример успешного добавления или редактирования пользователя.</p></div>
+          <p>В рабочей системе изменения будут отражены в списке пользователей. В статическом макете записи остаются прежними.</p>
+          <div class="actions"><a class="button " href="#users">К списку пользователей</a></div></section>
+      </section>
+
+      <section class="screen" id="user-removed" aria-labelledby="user-removed-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="user-removed-title">Пользователь удалён</h1>
+            <p class="lead">Результат подтверждения удаления.</p></div>
+          
+        </div>
+
+        <section class="card narrow"><div class="notice success"><p>Пример результата удаления пользователя ID 101.</p></div>
+          <p class="hint">Экран демонстрационный. Общий список пользователей не изменён.</p><div class="actions"><a class="button " href="#users">К списку пользователей</a></div></section>
+      </section>
+
+      <section class="screen" id="map" aria-labelledby="map-title">
+        <div class="page-head">
+          <div><p class="eyebrow">АИС «Аренда плавательного средства»</p>
+            <h1 id="map-title">Карта экранов</h1>
+            <p class="lead">Навигационная схема для демонстрации преподавателю.</p></div>
+          
+        </div>
+
+        <section class="card"><h2>Основные переходы</h2><p>Ссылки показывают связи между состояниями макета. Стрелки обозначают последовательность действий.</p>
+          <div class="screen-map">
+            <article><h3>Создание брони</h3><div class="flow"><a href="#home">Главная</a><span aria-hidden="true">→</span><a href="#booking">Форма бронирования</a><span aria-hidden="true">→</span><a href="#review">Подтверждение</a><span aria-hidden="true">→</span><a href="#created">Бронь оформлена</a></div></article>
+            <article><h3>Просмотр и редактирование</h3><div class="flow"><a href="#bookings">Мои брони</a><span aria-hidden="true">→</span><a href="#detail">Карточка</a><span aria-hidden="true">→</span><a href="#edit">Редактирование</a><span aria-hidden="true">→</span><a href="#updated">Результат</a></div></article>
+            <article><h3>Отмена брони</h3><div class="flow"><a href="#detail">Карточка</a><span aria-hidden="true">→</span><a href="#delete">Подтверждение отмены</a><span aria-hidden="true">→</span><a href="#deleted">Бронь отменена</a></div></article>
+            <article><h3>Поиск и каталог</h3><div class="flow"><a href="#catalog">Каталог с фильтрами</a><a href="#search-result">Результат поиска</a><a href="#not-found">Ничего не найдено</a><a href="#empty">Пустой список</a><a href="#bookings-2">Вторая страница</a></div></article>
+            <article><h3>Ошибки при бронировании</h3><div class="flow"><a href="#booking">Форма</a><span aria-hidden="true">→</span><a href="#error">Правило 2 часов</a><a href="#unavailable">Ресурс занят</a><span aria-hidden="true">→</span><a href="#booking">Исправление параметров</a></div></article>
+            <article><h3>Администратор</h3><div class="flow"><a href="#users">Пользователи</a><span aria-hidden="true">→</span><a href="#user-add">Добавление</a><a href="#user-edit">Редактирование</a><a href="#user-delete">Удаление</a></div></article>
+            <article><h3>Другие роли и состояния</h3><div class="flow"><a href="#login">Вход</a><a href="#subscription">Абонемент</a><a href="#frozen">Заморозка</a><a href="#schedule">Инструктор</a><a href="#reports">Руководитель</a></div></article>
+          </div></section>
+        <section class="card"><h2>Схема прототипов</h2><p>Низкодетальные макеты и связи между ними сохранены отдельно в папке docs/wireframes.</p>
+          <img class="wireframe-preview" src="../docs/wireframes/screens.svg" alt="Схема экранов: главная, бронирование, подтверждение, список, карточка, редактирование, отмена и ошибки, связанные стрелками" width="1200" height="860">
+          <p class="hint"><a href="../docs/wireframes/screens.svg">Открыть схему в полном размере</a></p></section>
+      </section>
+    </main>
+  </div>
+  <footer class="site-footer"><div class="footer-inner"><span>АИС «Аренда плавательного средства» · Лабораторная работа № 5</span><span>Вдовин Д. Е. · 3 курс, 8 группа · БГУ, 2026</span></div></footer>
+</body>
+</html>

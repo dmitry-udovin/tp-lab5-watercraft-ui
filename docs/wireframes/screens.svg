@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+<title id="title">Прототипы основных экранов и переходы</title><desc id="desc">Низкодетальные прототипы экранов. Стрелки показывают переходы. Каждый макет является ссылкой на соответствующий экран.</desc>
+<defs><marker id="tip" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#395a80"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#263648}.title{font-size:17px;font-weight:bold}.body{font-size:15px}.small{font-size:12px;fill:#526477}.frame{fill:#fff;stroke:#8296ab;stroke-width:1.5}.head{fill:#e9eef4}.line{stroke:#c9d2dd}.arrow{fill:none;stroke:#395a80;stroke-width:2;marker-end:url(#tip)}a:hover .frame{stroke:#2361ad;stroke-width:3}</style>
+<rect width="1200" height="860" fill="#f7f9fc"/><text x="40" y="35" font-size="24" font-weight="bold">Прототипы основных экранов и переходы</text>
+<text x="40" y="60" class="body">Лабораторная работа № 5. Нажмите на прототип, чтобы открыть соответствующий экран.</text>
+<a href="../../UI/index.html#home"><rect class="frame" x="40" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="100" width="320" height="28"/>
+    <text x="52" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="153" class="title">Главная</text>
+    <text x="56" y="180" class="body">Ближайшая бронь · абонемент</text><text x="56" y="202" class="body">[Забронировать] [Все брони]</text><text x="56" y="224" class="body">Правило: минимум за 2 часа</text>
+    <line x1="52" y1="250" x2="348" y2="250" class="line"/>
+    <text x="56" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#booking"><rect class="frame" x="440" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="100" width="320" height="28"/>
+    <text x="452" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="153" class="title">Форма бронирования</text>
+    <text x="456" y="180" class="body">Средство · площадка · дата</text><text x="456" y="202" class="body">Время · люди · доп. услуги</text><text x="456" y="224" class="body">[Проверить доступность]</text>
+    <line x1="452" y1="250" x2="748" y2="250" class="line"/>
+    <text x="456" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#review"><rect class="frame" x="840" y="100" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="100" width="320" height="28"/>
+    <text x="852" y="119" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="153" class="title">Подтверждение</text>
+    <text x="856" y="180" class="body">Параметры выбранного заказа</text><text x="856" y="202" class="body">Стоимость · VIP-скидка</text><text x="856" y="224" class="body">[Подтвердить] [Изменить]</text>
+    <line x1="852" y1="250" x2="1148" y2="250" class="line"/>
+    <text x="856" y="266" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#bookings"><rect class="frame" x="40" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="360" width="320" height="28"/>
+    <text x="52" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="413" class="title">Мои бронирования</text>
+    <text x="56" y="440" class="body">Поиск · список заказов</text><text x="56" y="462" class="body">[Посмотреть бронь]</text><text x="56" y="484" class="body">[1] [2] [Следующая]</text>
+    <line x1="52" y1="510" x2="348" y2="510" class="line"/>
+    <text x="56" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#detail"><rect class="frame" x="440" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="360" width="320" height="28"/>
+    <text x="452" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="413" class="title">Карточка брони</text>
+    <text x="456" y="440" class="body">Время · площадка · стоимость</text><text x="456" y="462" class="body">[Редактировать] [Отменить]</text><text x="456" y="484" class="body">[К списку]</text>
+    <line x1="452" y1="510" x2="748" y2="510" class="line"/>
+    <text x="456" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#edit"><rect class="frame" x="840" y="360" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="360" width="320" height="28"/>
+    <text x="852" y="379" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="413" class="title">Редактирование</text>
+    <text x="856" y="440" class="body">Текущие данные заказа</text><text x="856" y="462" class="body">Новое время · доп. услуги</text><text x="856" y="484" class="body">[Сохранить] [Отмена]</text>
+    <line x1="852" y1="510" x2="1148" y2="510" class="line"/>
+    <text x="856" y="526" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#empty"><rect class="frame" x="40" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="40" y="620" width="320" height="28"/>
+    <text x="52" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="56" y="673" class="title">Пустое состояние</text>
+    <text x="56" y="700" class="body">Бронирований пока нет</text><text x="56" y="722" class="body">Подсказка о первом заказе</text><text x="56" y="744" class="body">[Создать первую бронь]</text>
+    <line x1="52" y1="770" x2="348" y2="770" class="line"/>
+    <text x="56" y="786" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#delete"><rect class="frame" x="440" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="440" y="620" width="320" height="28"/>
+    <text x="452" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="456" y="673" class="title">Отмена брони</text>
+    <text x="456" y="700" class="body">Номер заказа и его параметры</text><text x="456" y="722" class="body">Подтверждение удаления</text><text x="456" y="744" class="body">[Да, отменить] [Нет]</text>
+    <line x1="452" y1="770" x2="748" y2="770" class="line"/>
+    <text x="456" y="786" class="small">Footer: АИС · автор · год</text></a><a href="../../UI/index.html#error"><rect class="frame" x="840" y="620" width="320" height="174" rx="4"/>
+    <rect class="head" x="840" y="620" width="320" height="28"/>
+    <text x="852" y="639" class="small">Аренда на воде · меню · вход</text>
+    <text x="856" y="673" class="title">Ошибка бронирования</text>
+    <text x="856" y="700" class="body">Правило 2 часов / ресурс занят</text><text x="856" y="722" class="body">Пояснение причины ошибки</text><text x="856" y="744" class="body">[Исправить параметры]</text>
+    <line x1="852" y1="770" x2="1148" y2="770" class="line"/>
+    <text x="856" y="786" class="small">Footer: АИС · автор · год</text></a><path class="arrow" d="M360 180 L435 180"/><text class="small" x="362" y="162">Новая бронь</text><path class="arrow" d="M760 180 L835 180"/><text class="small" x="765" y="162">Проверка</text><path class="arrow" d="M200 275 L200 355"/><text class="small" x="210" y="319">Все брони</text><path class="arrow" d="M360 440 L435 440"/><text class="small" x="363" y="422">Просмотр</text><path class="arrow" d="M760 440 L835 440"/><text class="small" x="766" y="422">Изменить</text><path class="arrow" d="M600 535 L600 615"/><text class="small" x="612" y="580">Отменить</text><path class="arrow" d="M200 535 L200 615"/><text class="small" x="210" y="580">Нет записей</text><path class="arrow" d="M1000 535 L1000 615"/><text class="small" x="1010" y="580">Ошибка проверки</text><path class="arrow" d="M1000 275 L1000 315 L600 315 L600 355"/><text x="670" y="307" class="small">Подтверждение → создание → просмотр</text><text x="40" y="825" class="body">Вдовин Д. Е. · АИС «Аренда плавательного средства» · HTML + CSS</text></svg>
